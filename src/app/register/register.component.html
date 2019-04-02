@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Register Form
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+<ion-item>
+  <ion-label position="floating">username</ion-label>
+  <ion-input  [(ngModel)]="customer.name" ></ion-input>
+  <ion-icon name="person" slot="end"></ion-icon>
+</ion-item>
+<ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input  [(ngModel)]="customer.email" ></ion-input>
+    <ion-icon name="mail" slot="end"></ion-icon>
+  </ion-item>
+<ion-item>
+  <ion-label position="floating">password</ion-label>
+  <ion-input  [(ngModel)]="customer.password" ></ion-input>
+  <ion-icon name="eye-off" slot="end"></ion-icon>
+</ion-item>
+<ion-item>
+    <ion-label position="floating">Phone</ion-label>
+    <ion-input  [(ngModel)]="customer.phone"></ion-input>
+    <ion-icon name="tablet-portrait" slot="end"></ion-icon>
+</ion-item>
+<ion-item>
+    <ion-label position="floating">Address</ion-label>
+    <ion-input  [(ngModel)]="customer.address"></ion-input>
+    <ion-icon name="send" slot="end"></ion-icon>
+</ion-item>
+
+<div class="buttom">
+  <ion-button  shape="round"color="primary" (click)="addRemote()"  expand="full">Register</ion-button>
+</div>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Payment
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    
+      <ion-list>
+          <ion-item>
+            <ion-label>Payment  Selection</ion-label>
+            <ion-select [(ngModel)]="payment"  placeholder="Select One">
+              <ion-select-option value="card">Debit/Credit Cards</ion-select-option>
+              <ion-select-option value="upi">UPI Apps</ion-select-option>
+            </ion-select>
+          </ion-item>
+     </ion-list>  
+     <div>
+        <ion-item>
+            <ion-label  position="floating">Card Number</ion-label>
+            <ion-input [(ngModel)]="cardnumber"   ></ion-input>
+            <ion-icon name="card" slot="end"></ion-icon>
+          </ion-item>
+     </div> 
+     <div>
+        <ion-item>
+            <ion-label position="floating">Card Holder Name</ion-label>
+            <ion-input ></ion-input>
+            <ion-icon name="person" slot="end"></ion-icon>
+        </ion-item>
+     </div>
+      <div>
+          <ion-item>
+              <ion-label position="floating">CVV</ion-label>
+              <ion-input ></ion-input>
+              <ion-icon name="card" slot="end"></ion-icon>
+          </ion-item>
+      </div>
+      
+  <div class="buttom" style="margin-top:15px;width:45%;margin-left:100px;">
+    <ion-button  shape="round" color="success" (click)="onSuccess()"  expand="full">Proceed to Pay</ion-button>
+  </div>
+  </ion-content>
+  
